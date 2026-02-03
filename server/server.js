@@ -29,7 +29,9 @@ con.connect().then(()=>console.log('database connected'))
 
 app.use(cors({
     origin: [
-        'http://localhost:5173'
+        'http://localhost:5173',
+        'http://localhost:4173/',
+        'https://task4-front-kqif.onrender.com'
     ]
 }))
 

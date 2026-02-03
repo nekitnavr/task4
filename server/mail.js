@@ -16,7 +16,7 @@ async function sendVerificationEmail(recipientEmail) {
       .setFrom(sentFrom)
       .setTo(recipients)
       .setSubject("Email verification")
-      .setHtml(`<strong><a href='http://localhost:3000/api/verifyUser?email=${recipientEmail}'>Verify email</a></strong>`)
+      .setHtml(`<strong><a href='${process.env.FRONT_URL}/api/verifyUser?email=${recipientEmail}'>Verify email</a></strong>`)
       .setText("This is a test email");
 
     const response = await mailerSend.email.send(emailParams);
